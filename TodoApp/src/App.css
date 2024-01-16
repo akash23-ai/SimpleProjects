@@ -1,0 +1,15 @@
+
+.checked {
+  display: inline-grid;
+  text-decoration: line-through;
+  text-decoration-color:black ;
+}
+
+.unChecked {
+  display: inline;
+  text-decoration: none;
+  
+}
+
+
+/* className={todo.completed ? "checked":"notChecked"} */
