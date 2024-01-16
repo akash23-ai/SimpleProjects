@@ -95,7 +95,7 @@ async function main() {
     buttonStart.setAttribute("disabled", true);
   }
 
-  stopBtn.addEventListener("click", stopBtnFn);
+  // stopBtn.addEventListener("click", stopBtnFn);
 
   // function stopBtnFn() {
   //   mediaRecoder.stop();
