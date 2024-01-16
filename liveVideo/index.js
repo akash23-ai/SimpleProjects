@@ -21,7 +21,6 @@ async function main() {
 
   async function startLive() {
     if (!stream.active) {
-      console.log("inside");
       stream = await navigator.mediaDevices.getUserMedia({
         video: {
           facingMode: {
@@ -31,7 +30,6 @@ async function main() {
         audio: true,
       });
     }
-    console.log(stream);
     myVideo.srcObject = stream;
 
     buttonStart.removeAttribute("disabled");
@@ -43,9 +41,7 @@ async function main() {
   function stopLive() {
     const stream = myVideo.srcObject;
     var tracks = stream.getTracks();
-
-    console.log(tracks);
-
+    
     tracks.forEach((track) => {
       track.stop();
     });
@@ -84,7 +80,6 @@ async function main() {
     });
 
     if (mediaRecoder.mimeType !== "video/webm") {
-      console.log("inside media recoder");
       mediaRecoder = new MediaRecorder(stream, {
         mimeType: "video/webm",
       });
@@ -93,7 +88,6 @@ async function main() {
     mediaRecoder.start();
 
     mediaRecoder.addEventListener("dataavailable", (event) => {
-      console.log("whats up guys i am here");
       recordedVideo.src = URL.createObjectURL(event.data);
     });
 
