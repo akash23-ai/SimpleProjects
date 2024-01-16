@@ -97,14 +97,14 @@ async function main() {
 
   stopBtn.addEventListener("click", stopBtnFn);
 
-  function stopBtnFn() {
-    mediaRecoder.stop();
-    buttonStart.setAttribute("disabled", true);
-    stopBtn.setAttribute("disabled", true);
-    if (!recordedVideo.hasAttribute("controls")) {
-      recordedVideo.setAttribute("controls", true);
-    }
-  }
+  // function stopBtnFn() {
+  //   mediaRecoder.stop();
+  //   buttonStart.setAttribute("disabled", true);
+  //   stopBtn.setAttribute("disabled", true);
+  //   if (!recordedVideo.hasAttribute("controls")) {
+  //     recordedVideo.setAttribute("controls", true);
+  //   }
+  // }
 }
 
 main();
