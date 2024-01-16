@@ -48,7 +48,7 @@ async function main() {
 
     myVideo.srcObject = null;
 
-    stopBtn.setAttribute("disabled", true);
+    // stopBtn.setAttribute("disabled", true);
     recordedVideo.setAttribute("controls", true);
 
     stopLiveBtn.setAttribute("disabled", true);
