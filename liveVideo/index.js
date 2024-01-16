@@ -91,7 +91,7 @@ async function main() {
       recordedVideo.src = URL.createObjectURL(event.data);
     });
 
-    stopBtn.removeAttribute("disabled");
+    // stopBtn.removeAttribute("disabled");
     buttonStart.setAttribute("disabled", true);
   }
 
