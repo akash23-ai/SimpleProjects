@@ -32,3 +32,18 @@
   color: white;
   border-radius: 10px;
 }
+
+
+.paragraphDiv {
+  margin-top: 2rem;
+  height: auto;
+  width: fit-content;
+  padding: 2rem;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2),
+   -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 500;
+}

@@ -1,20 +1,37 @@
 import { useState } from "react";
 import "./App.css";
+import {loremIpsum} from "react-lorem-ipsum";
 
 function App() {
   const [value, setValue] = useState("");
-  const[length, setLength] = useState("")
+  const [paragraph, setParagraph] = useState("");
 
-  const handleClick = () => { 
-    console.log(typeof value)
+  // const paragraphGenerator = (length) => {
+  //   let result = "";
+  //   let characters =
+  //     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  //   let charactersLength = characters.length;
+  //   for (let i = 0; i < length; i++) {
+  //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
 
-    if (value === "") {
-      alert("please enter a number")
-      return
+  //   }
+
+  //   console.log(result)
+  //   return result;
+  // }
+
+  const handleClick = () => {
+    setValue(parseInt(value));
+    if (isNaN(value) || value === "") {
+      alert("Please Type a Number");
+      setValue("");
+      return;
     }
-    console.log("I am here")
-   setLength((value))
-  }
+    // const lorem = loremIpsum({count: value, units: "words"});
+    const para = loremIpsum({p: value, startWithLoremIpsum: true});
+
+    setParagraph(para);
+  };
 
   return (
     <>
@@ -29,11 +46,13 @@ function App() {
           />
           <button onClick={handleClick}>Generate</button>
         </div>
-        <div>
-          <p>
-           
-          </p>
-        </div>
+        {paragraph && (
+          <div className="paragraphDiv">
+           <p className="paragraph">
+            {paragraph}
+           </p>
+          </div>
+        )}
       </div>
     </>
   );
