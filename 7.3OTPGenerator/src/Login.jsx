@@ -4,15 +4,16 @@ function Login() {
   return (
     <div className="mainDiv">
       <div className="otpDiv">
-        <h1>LOGIN via OTP</h1>
+        <h1>Give Your OTP</h1>
         <div className="container">
-          <div class="inputfield">
-            <input type="number" maxlength="1" class="input" disabled />
-            <input type="number" maxlength="1" class="input" disabled />
-            <input type="number" maxlength="1" class="input" disabled />
-            <input type="number" maxlength="1" class="input" disabled />
+          <div className="inputfield">
+            <input type="number" maxLength={1} className="inputBox"  />
+            <input type="number" maxLength={1} className="inputBox"  />
+            <input type="number" maxLength={1} className="inputBox"  />
+            <input type="number" maxLength={1} className="inputBox"  />
           </div>
         </div>
+        <button className="btn">Sumbit</button>
       </div>
     </div>
   );
