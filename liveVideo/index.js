@@ -22,7 +22,7 @@ async function main() {
   async function startLive() {
     if (!stream.active) {
       stream = await navigator.mediaDevices.getUserMedia({
-        video: {
+        video:{
           facingMode: {
             exact: "user",
           },
